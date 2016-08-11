@@ -1,0 +1,51 @@
+<div class="req-sort-filter">
+    <h1>Sort and Filter Requirement</h1>
+
+    <form class="form form-horizontal">
+        <div class="form-group">
+            <label for="prop1-filter" class="col-sm-2">Filter prop1</label>
+            <div class="col-sm-4">
+                <input id="prop1-filter" type="text" class="form-control" ng-model="prop1Filter"
+                       placeholder="Enter filter value">
+            </div>
+            <div class="btn btn-primary" ng-click="reset()">Reset Filters</div>
+        </div>
+        <div class="form-group">
+            <label for="prop2-filter" class="col-sm-2">Filter prop2</label>
+            <div class="col-sm-4">
+                <input id="prop2-filter" type="text" class="form-control" ng-model="prop2Filter"
+                       placeholder="Enter filter value">
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-bordered">
+        <thead>
+        <th ng-click="setOrderBy('id')" class="index">No.</th>
+        <th ng-click="setOrderBy('prop1')">prop1
+            <i class="fa"
+               ng-class="{
+               'fa-sort': orderBy.indexOf('prop1') === -1,
+               'fa-sort-asc': orderBy.indexOf('prop1') !== -1,
+               'fa-sort-desc': orderBy.indexOf('-prop1') !== -1,
+               }"></i>
+        </th>
+        <th ng-click="setOrderBy('prop2')">prop2
+            <i class="fa"
+               ng-class="{
+               'fa-sort': orderBy.indexOf('prop2') === -1,
+               'fa-sort-asc': orderBy.indexOf('prop2') !== -1,
+               'fa-sort-desc': orderBy.indexOf('-prop2') !== -1
+               }"></i>
+        </th>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="item in items | orderBy: orderBy | filter: {prop1: prop1Filter, prop2: prop2Filter} track by item.id">
+            <td class="index">{{item.id}}</td>
+            <td>{{item.prop1}}</td>
+            <td>{{item.prop2}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

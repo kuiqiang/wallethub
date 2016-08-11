@@ -1,0 +1,24 @@
+<div class="req-ui-router">
+    <h1>ui-router Requirements - Page 2</h1>
+    <table class="table table-bordered">
+        <tr>
+            <td>Controller Name</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>{{state}}</td>
+        </tr>
+        <tr>
+            <td>Page ID</td>
+            <td>{{pageId}}</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <label for="shared-value">Enter <h5 class="shared-value"><span class="label label-danger">SHARED_VALUE</span>
+        </h5></label>
+        <span class="note"> (displayed on <a ui-sref="req-ui-router({pageId: 3, view: null})">page 3</a>)</span>
+        <input id="shared-value" type="text" class="form-control" ng-model="value" ng-change="updateValue()"
+               placeholder="Enter shared value">
+    </div>
+</div>

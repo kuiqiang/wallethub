@@ -1,0 +1,23 @@
+.req-ui-router {
+  .views {
+    margin-bottom: 15px;
+  }
+
+  .shared-value {
+    display: inline-block;
+
+    .label {
+      margin-right: 8px;
+    }
+  }
+
+  .note {
+    font-style: italic;
+    color: gray;
+  }
+
+  .empty {
+    font-style: italic;
+    color: lightgray;
+  }
+}

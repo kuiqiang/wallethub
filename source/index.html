@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WalletHub</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <base href="/">
+</head>
+<body>
+
+<div class="container">
+    <div class="col-sm-push-1 col-sm-10">
+        <div ng-include="'partials/nav.html'"></div>
+        <main ui-view></main>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="vendor/requirejs/require.js"></script>
+<script>
+    // Obtain requirejs config
+    require(['require', './js/config-require'], function (require, config) {
+
+        // Update global require config
+        window.require.config(config);
+
+        // Load app
+        require(['./js/main.js']);
+    });
+</script>
+
+</body>
+</html>

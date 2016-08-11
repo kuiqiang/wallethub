@@ -1,0 +1,26 @@
+<div class="req-sum">
+    <h1>Sum Requirement</h1>
+
+    <form class="form row">
+        <div class="form-group col-sm-2">
+            <label for="n1">Number 1</label>
+            <input id="n1" type="number" class="form-control" ng-model="n1" placeholder="Enter number 1"
+                   ng-change="calculateSum()" clear-zero>
+        </div>
+        <div class="form-group col-sm-2">
+            <label for="n2">Number 2</label>
+            <input id="n2" type="number" class="form-control" ng-model="n2" placeholder="Enter number 2"
+                   ng-change="calculateSum()" clear-zero>
+        </div>
+        <div class="form-group col-sm-2">
+            <label for="n3">Number 3</label>
+            <input id="n3" type="number" class="form-control" ng-model="n3" placeholder="Enter number 3"
+                   ng-change="calculateSum()" clear-zero>
+        </div>
+        <div class="form-group col-sm-2">
+            <label for="sum">Sum</label>
+            <input id="sum" type="number" class="form-control" ng-model="sum" placeholder="Enter sum"
+                   ng-change="spreadSum()" clear-zero>
+        </div>
+    </form>
+</div>

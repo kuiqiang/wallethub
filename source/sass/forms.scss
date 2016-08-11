@@ -1,0 +1,18 @@
+// Adapt from bootstrap 4
+.form-control {
+  padding: .5rem .75rem;
+  line-height: 1.25;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem;
+  box-shadow: none !important;
+
+  &:focus, &:active {
+    border-color: #66afe9;
+    outline: 0;
+  }
+}
