@@ -17,13 +17,12 @@
     </table>
 
     <div class="views">
-        <h5>Views</h5>
-        <a ui-sref="req-ui-router({pageId: 1, view: 1})" class="label label-primary">Toggle View 1</a>
-        <a ui-sref="req-ui-router({pageId: 1, view: 2})" class="label label-primary">Toggle View 2</a>
+        <h4>Nested Views</h4>
+        <h5>
+            <a ui-sref="req-ui-router.p1-nested-view({view: 1})" class="label label-primary">Toggle Nested View 1</a>
+            <a ui-sref="req-ui-router.p1-nested-view({view: 2})" class="label label-primary">Toggle Nested View 2</a>
+        </h5>
     </div>
 
-    <!-- TODO
-    <div ui-view="view-1"></div>
-    <div ui-view="view-2"></div>
-     -->
+    <div ui-view></div>
 </div>

@@ -17,6 +17,12 @@ define([
                 templateUrl: function ($stateParams) {
                     return 'js/modules/req-ui-router/pages/page-' + $stateParams.pageId + '/p' + $stateParams.pageId + '.html';
                 }
+            })
+            .state('req-ui-router.p1-nested-view', {
+                url: '/{view}',
+                templateUrl: function ($stateParams) {
+                    return 'js/modules/req-ui-router/pages/page-1/nv-' + $stateParams.view + '.html';
+                }
             });
     }]);
 
