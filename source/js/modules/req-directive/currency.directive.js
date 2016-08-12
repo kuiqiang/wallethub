@@ -9,13 +9,10 @@ define(['./module'], function (module) {
                 var format = function (amount) {
                     var value = amount.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-                    if (!value)
-                        return '';
-                    else
-                        return '$' + value;
+                    return value ? '$' + value : '';
                 };
 
-                $element.on('change keydown', function (e) {
+                $element.on('keydown', function (e) {
                     if (
                         (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || // numbers
                         e.keyCode === 8 // backspace

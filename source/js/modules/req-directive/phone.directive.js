@@ -38,7 +38,7 @@ define(['./module'], function (module) {
                     }
                 };
 
-                $element.on('change keydown', function (e) {
+                $element.on('keydown', function (e) {
                     if (
                         (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) && // numbers
                         $element.val().length <= maxLength) ||

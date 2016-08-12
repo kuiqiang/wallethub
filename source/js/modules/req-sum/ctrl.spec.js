@@ -2,7 +2,7 @@ define([
     'angular-mocks',
     'Source/modules/req-sum/ctrl'
 ], function () {
-    describe('SumRequirementController in req-sum', function () {
+    describe('SumRequirementController in app.sumRequirement', function () {
         var $controller, $scope;
 
         beforeEach(function () {

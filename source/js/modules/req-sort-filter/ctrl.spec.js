@@ -2,7 +2,7 @@ define([
     'angular-mocks',
     'Source/modules/req-sort-filter/ctrl'
 ], function () {
-    describe('SumRequirementController in req-sum', function () {
+    describe('SumRequirementController in app.sortFilterRequirement', function () {
         var $controller, $scope;
 
         beforeEach(function () {
