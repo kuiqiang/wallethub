@@ -6,7 +6,7 @@ module.exports = function (config) {
             {pattern: 'source/js/**/*.js', included: false},
             {pattern: 'source/js/**/*.map', included: false},
             {pattern: 'source/vendor/**/*.js', included: false},
-            {pattern: 'source/vendor/**/*.map', included: false},
+            {pattern: 'source/vendor/**/*.map', included: false}
         ],
         exclude: [
             'source/vendor/**/*spec.js'
@@ -16,7 +16,7 @@ module.exports = function (config) {
         // Chrome, ChromeCanary, Firefox, IE (only Windows), Opera, PhantomJS, Safari (only Mac)
 
         reporters: [
-            'dots',
+            'mocha',
             'coverage'
         ],
         preprocessors: {
