@@ -23,6 +23,9 @@ Quick Run
     # Serve application:
     http-server ./build
 
+    # Run unit tests and coverage:
+    gulp karma
+
 [Gulp](http://gulpjs.com/) flows
 ----------
 * `gulp`
