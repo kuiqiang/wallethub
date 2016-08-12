@@ -6,6 +6,15 @@ define(['./module'], function (module) {
             scope: true,
             transclude: true,
             link: function ($scope, $element) {
+                var format = function (amount) {
+                    var value = amount.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+                    if (!value)
+                        return '';
+                    else
+                        return '$' + value;
+                };
+
                 $element.on('change keydown', function (e) {
                     if (
                         (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || // numbers
@@ -15,7 +24,7 @@ define(['./module'], function (module) {
                             // Strip previous formatting
                             var value = $element.val().replace(/[$,.]/g, '');
                             // Format value
-                            $element.val($filter('currency')(value, '$', false));
+                            $element.val(format(value));
                         });
                     } else {
                         e.preventDefault();

@@ -6,6 +6,7 @@ define(['./module'], function (module) {
             scope: true,
             transclude: true,
             link: function ($scope, $element) {
+                var maxLength = 13;
                 var format = function (tel) {
                     if (!tel)
                         return '';
@@ -35,12 +36,12 @@ define(['./module'], function (module) {
                     else {
                         return '(' + city;
                     }
-
                 };
 
                 $element.on('change keydown', function (e) {
                     if (
-                        (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || // numbers
+                        (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) && // numbers
+                        $element.val().length <= maxLength) ||
                         e.keyCode === 8 // backspace
                     ) {
                         $timeout(function () {
