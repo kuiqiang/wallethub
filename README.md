@@ -34,10 +34,6 @@ Quick Run
 
   Starts Karma server watching scripts updates.
 
-* `gulp protractor`
-
-  Runs E2E tests against source files.
-
 * `gulp watch`
 
   Listens to changes to stylesheets and scripts and reloads browser page during development.
